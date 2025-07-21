@@ -27,6 +27,27 @@ inventory:["carrot", "herbs", "coin pouch"],
 moneyFactor: 70
 };
 
+const bob = {
+id: "bob",
+name: "bob",
+class: "character",
+species: "human", 
+health: Infinity,
+inventory:["magic maguffin"],
+moneyFactor: Infinity
+};
+
+const mushroomKing = {
+id: "mushroomKing",
+name: "mushroomKing",
+class: "character",
+species: "human", 
+health: 80,
+inventory:["magic mushrooms", "food", "mushroom coffee"],
+moneyFactor: 50 
+}
+
+
 //locations
 
 const limestoneCanyon = {
