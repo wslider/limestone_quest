@@ -13,8 +13,8 @@ name: "jenny",
 class: "character",
 species:  "dog",
 health:  100,
-inventory:["bone", "stick"],
-
+inventory:["bone", "stick", "armor"],
+moneyFactor: 20
 };
 
 const little = {
@@ -23,7 +23,8 @@ name: "little",
 class: "character",
 species: "rabbit", 
 health:100,
-inventory:["carrot", "herbs"],
+inventory:["carrot", "herbs", "coin pouch"],
+moneyFactor: 70
 };
 
 //locations
@@ -32,7 +33,32 @@ const limestoneCanyon = {
 id: "limestoneCanyon",
 name: "limestoneCanyon",
 class: "location",
-hazards ["goblins", "falling rocks", "weather"], 
+hazards: ["goblins", "falling rocks", "extreme weather"],
+prizes: []
+}
+
+const limestoneCafe = {
+id: "",
+name: "",
+class: "location",
+hazards: [],
+prizes: []
+}
+
+const fozberryFalls = {
+id: "",
+name: "",
+class: "location",
+hazards: ["falling water", "slippery rocks"],
+prizes: ["medicinal moss", "rare coins"]
+}
+
+const abandonedMine = {
+id: "",
+name: "",
+class: "location",
+hazards: [],
+prizes: [] 
 }
 
 // magic lantern, coin pouch, old book 
