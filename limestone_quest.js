@@ -12,9 +12,10 @@ id: "jenny",
 name: "jenny",
 class: "character",
 species:  "dog",
-health:  100,
 inventory:["bone", "stick", "armor"],
-moneyFactor: 20
+health: 100,
+strength: 75, 
+money: 20
 };
 
 const little = {
@@ -22,9 +23,9 @@ id: "little",
 name: "little",
 class: "character",
 species: "rabbit", 
-health:100,
 inventory:["carrot", "herbs", "coin pouch"],
-moneyFactor: 70
+health: 100,
+money: 100
 };
 
 const bob = {
@@ -33,8 +34,8 @@ name: "bob",
 class: "character",
 species: "human", 
 health: Infinity,
-inventory:["magic maguffin"],
-moneyFactor: Infinity
+inventory:["magic maguffin", "empty wallet", "lucky penny"],
+money: 0
 };
 
 const mushroomKing = {
@@ -42,9 +43,9 @@ id: "mushroomKing",
 name: "mushroomKing",
 class: "character",
 species: "human", 
-health: 80,
-inventory:["magic mushrooms", "food", "mushroom coffee"],
-moneyFactor: 50 
+health: 50,
+inventory:["magic mushrooms", "extra food", "mushroom coffee"],
+money: 50 
 }
 
 
@@ -55,7 +56,7 @@ id: "limestoneCanyon",
 name: "limestoneCanyon",
 class: "location",
 hazards: ["goblins", "falling rocks", "extreme weather"],
-prizes: []
+prizes: ["magic mushrooms", "experience points"]
 }
 
 const limestoneCafe = {
@@ -79,7 +80,12 @@ id: "",
 name: "",
 class: "location",
 hazards: [],
-prizes: [] 
+prizes: ["money", "gems", "gold"] 
 }
 
 // magic lantern, coin pouch, old book 
+
+function buyHealth (money > 10){
+    health += 20;
+    money -= 10
+}
