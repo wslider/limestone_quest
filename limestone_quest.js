@@ -85,7 +85,7 @@ prizes: ["money", "gems", "gold"]
 
 // magic lantern, coin pouch, old book 
 
-function buyHealth (money > 10){
+function buyHealth (){
     health += 20;
-    money -= 10
+    money -= 10;
 }
