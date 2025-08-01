@@ -3,6 +3,7 @@
 let mushroomCoffee = 10 
 let elevation = 5000
 let health = 100
+let energy = 100
 let mushroomCoffeeText = mushroomCoffee
 
 // characters
@@ -88,4 +89,11 @@ prizes: ["money", "gems", "gold"]
 function buyHealth (){
     health += 20;
     money -= 10;
+    energy +=10; 
+}
+
+function drinkMushroomCoffee (){
+    energy +=30;
+    money -=10;
+    health +=5; 
 }
