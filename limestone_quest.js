@@ -1,10 +1,13 @@
 // global variables
 
-let mushroomCoffee = 10 
-let elevation = 5000
-let health = 100
-let energy = 100
-let mushroomCoffeeText = mushroomCoffee
+let health 
+let energy 
+let money 
+let strength
+let xp // experience points 
+let mushroomCoffee = 10 // gives you energy 
+
+let mushroomCoffeeText = mushroomCoffee 
 
 // characters
 
