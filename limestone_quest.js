@@ -100,3 +100,9 @@ function drinkMushroomCoffee (){
     money -=10;
     health +=5; 
 }
+
+// experiental event listener .. go to cafe 
+
+const goToCafe = document.getElementById('gameButton1');
+const gameText = document.getElementById('gameText');
+goToCafe.addEventListener('click', () => {gameText.textContent = 'Welcome to Limestone Cafe! Would you like some Mushroom Coffee?'}); 
