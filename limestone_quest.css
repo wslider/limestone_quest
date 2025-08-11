@@ -8,3 +8,30 @@ body {
     font-weight: bolder; 
     color:white
 }
+
+.container {
+    display: flex;
+}
+
+#gameContainer {
+    width: 100vw; 
+    min-height: 70vh; 
+    display: flex; 
+    flex-direction: column;
+    background-color: rgb(1, 1, 100) ;
+    border: 2% solid white; 
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    #gameContainer {
+        width: 50vw;
+        height: 50vh; 
+        border: 2% solid white;
+        display: flex; 
+        flex-direction: row;
+        align-content: center;
+    }
+
+}
