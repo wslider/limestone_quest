@@ -18,6 +18,7 @@ body {
     top: 5%; 
     right: 5%;
     max-width: 40vw;
+    max-height: 40vh; 
 }
 
 #gameContainer {
@@ -51,15 +52,6 @@ body {
     top: 35%; 
 }
 
-@media only screen and (max-width: 600px) {
-    #gameImage {
-        max-width: 60vw; 
-        max-height: 25vh; 
-        top: 2%; 
-        right: 2%;
-    }
-}
-
 @media only screen and (min-width: 600px) {
 
     #gameContainer {
@@ -78,6 +70,11 @@ body {
 
     #gameText {
         font-size:1rem; 
+    }
+    #gameImage {
+        max-width: 40%;
+        max-height:40%; 
+
     }
 
 }
