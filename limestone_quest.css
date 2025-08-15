@@ -17,7 +17,7 @@ body {
     position:absolute;
     top: 5%; 
     right: 5%;
-    max-width: 50%;
+    max-width: 40vw;
 }
 
 #gameContainer {
