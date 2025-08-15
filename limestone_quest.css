@@ -13,6 +13,13 @@ body {
     display: flex;
 }
 
+#gameImage{
+    position:absolute;
+    top: 5%; 
+    right: 5%;
+    max-width: 50%;
+}
+
 #gameContainer {
     width: 100vw; 
     min-height: 70vh;
@@ -36,6 +43,14 @@ body {
  font-size:2rem; 
 }
 
+#gameText {
+    position:absolute;
+    max-width: 40%;
+    max-height:40%; 
+    left: 1%; 
+    top: 35%; 
+}
+
 @media only screen and (min-width: 600px) {
 
     #gameContainer {
@@ -53,7 +68,7 @@ body {
     }
 
     #gameText {
-        font-size:2rem; 
+        font-size:1rem; 
     }
 
 }
