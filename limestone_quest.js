@@ -22,6 +22,10 @@ button2.onclick = enterCanyon;
 button3.onclick = goToStore;
 button4.onclick = useTimeMachine; 
 
+//canyon = fozberry falls trail, whispering stream trail, deep canyon trail, leave canyon
+    // deep canyon trail = mushroom forest, deep mines, pit of despair
+//cafe = drink coffee, ask question, play game, leave cafe
+
 function update(location) {
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
