@@ -4,10 +4,33 @@ let health
 let energy 
 let money 
 let strength
-let xp // experience points 
+let xp 
 let mushroomCoffee = 10 // gives you energy 
 
 let mushroomCoffeeText = mushroomCoffee 
+
+const button1 = document.querySelector('#gameButton1');
+const button2 = document.querySelector('#gameButton2');
+const button3 = document.querySelector('#gameButton3');
+const button4 = document.querySelector('#gameButton4');
+
+const gameText = document.getElementById('gameText');
+
+// initialize buttons
+button1.onclick = goToCafe;
+button2.onclick = enterCanyon;
+button3.onclick = goToStore;
+button4.onclick = useTimeMachine; 
+
+function update(location) {
+  button1.innerText = location["button text"][0];
+  button2.innerText = location["button text"][1];
+  button3.innerText = location["button text"][2];
+  button1.onclick = location["button functions"][0];
+  button2.onclick = location["button functions"][1];
+  button3.onclick = location["button functions"][2];
+  text.innerHTML = location.text;
+}
 
 // characters
 
@@ -103,6 +126,19 @@ function drinkMushroomCoffee (){
 
 // experiental event listener .. go to cafe 
 
-const goToCafe = document.getElementById('gameButton1');
-const gameText = document.getElementById('gameText');
-goToCafe.addEventListener('click', () => {gameText.textContent = 'Welcome to Limestone Cafe! Would you like some Mushroom Coffee?'}); 
+
+
+
+function goToCafe(){
+
+d.textContent = "Drink Coffee"; 
+askQuestionButton.textContent = "Ask Question";
+playGameButton.textContent = "Play Game"; 
+leaveCafeButton.textContent = "Leave Cafe"; 
+
+}
+
+goToCafe.addEventListener('click', () => {
+    goToCafe();
+    gameText.textContent = 'Welcome to Limestone Cafe! Would you like some Mushroom Coffee?';
+});
