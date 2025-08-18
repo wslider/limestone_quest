@@ -36,6 +36,27 @@ function update(location) {
   text.innerHTML = location.text;
 }
 
+// locations 
+
+const locations = [
+  {
+    name: "Limestone Cafe",
+    "button text": ["Drink Coffee", "Ask Question", "Enjoy the Vibe", "Go to Canyon", "Go To Town"],
+    "button functions": [mushroomCoffee, askQuestion, cafeVibe, goToCanyon, goToTown],
+    "hazards": [], 
+    "prizes": [],
+    text: "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?"
+  },
+  {name: "",
+    "button text": ["Drink Coffee", "Ask Question", "Enjoy the Vibe", "Go to Canyon", "Go To Town"],
+    "button functions": [mushroomCoffee, askQuestion, cafeVibe, goToCanyon, goToTown],
+    "hazards": [], 
+    "prizes": [],
+    text: 
+  }
+]
+
+
 // characters
 
 const jenny = {
