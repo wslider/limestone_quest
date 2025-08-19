@@ -31,17 +31,21 @@ body {
     border: 2% solid white; 
 }
 
-#gameControls {
+.gameButtons {
     position:absolute; 
     bottom: 5%; 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 95%; 
+    align-items: center;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    flex-grow: calc(1);
+    width: 100%; 
+    background-color: #090129;
     }
 
-#gameControls.gameButton {
- font-size:2rem; 
+.gameButtons .gameButton {
+ font-size:1rem; 
 }
 
 #gameText {
@@ -55,12 +59,11 @@ body {
 @media only screen and (min-width: 600px) {
 
     #gameContainer {
-        width: 50vw;
-        height: 50vh; 
+        width: 75vw;
+        height: 75vh; 
         border: 2% solid white;
         display: flex; 
         flex-direction: row;
-        align-content: center;
     }
 
     #gameContainer.stat {
@@ -71,10 +74,6 @@ body {
     #gameText {
         font-size:1rem; 
     }
-    #gameImage {
-        max-width: 50%;
-        max-height:50%; 
-
-    }
+   
 
 }
