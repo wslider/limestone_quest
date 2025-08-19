@@ -48,6 +48,14 @@ body {
  font-size:1rem; 
 }
 
+#gameButton5Container {
+    width: 100%; 
+}
+
+#gameButton5 {
+    justify-self: stretch;
+}
+
 #gameText {
     position:absolute;
     max-width: 40%;
