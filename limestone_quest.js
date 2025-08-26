@@ -17,7 +17,7 @@ const button4 = document.querySelector('#gameButton4');
 const gameText = document.getElementById('gameText');
 
 // initialize buttons
-button1.onclick = goToCafe;
+//button1.onclick = goToCafe;
 button2.onclick = enterCanyon;
 button3.onclick = goToStore;
 button4.onclick = useTimeMachine; 
@@ -35,6 +35,14 @@ function update(location) {
   button3.onclick = location["button functions"][2];
   text.innerHTML = location.text;
 }
+
+button1.addEventListener('click',()=>{
+    const gameText = document.querySelector('#gameText');
+    gameText.textContent = "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?";
+}
+
+)
+
 
 // locations 
 
@@ -154,16 +162,4 @@ function drinkMushroomCoffee (){
 
 
 
-function goToCafe(){
 
-d.textContent = "Drink Coffee"; 
-askQuestionButton.textContent = "Ask Question";
-playGameButton.textContent = "Play Game"; 
-leaveCafeButton.textContent = "Leave Cafe"; 
-
-}
-
-goToCafe.addEventListener('click', () => {
-    goToCafe();
-    gameText.textContent = 'Welcome to Limestone Cafe! Would you like some Mushroom Coffee?';
-});
