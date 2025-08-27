@@ -1,12 +1,15 @@
 header {
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bolder; 
-    color:white}
+    color:white;
+    font-size:2rem;
+}
 body {
     background-color: rgb(2, 71, 24);
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bolder; 
-    color:white
+    color:white; 
+    font-size:2rem; 
 }
 
 .container {
@@ -45,7 +48,7 @@ body {
     }
 
 .gameButtons .gameButton {
- font-size:1rem; 
+ font-size:2rem; 
 }
 
 #gameText {
@@ -54,6 +57,7 @@ body {
     max-height:40%; 
     left: 1%; 
     top: 35%; 
+    font-size:2rem; 
 }
 
 @media only screen and (min-width: 600px) {
@@ -70,10 +74,5 @@ body {
         display: flex; 
         flex-direction: column;
     }
-
-    #gameText {
-        font-size:1rem; 
-    }
-   
 
 }
