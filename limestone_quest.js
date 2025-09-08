@@ -8,6 +8,7 @@
 
     const hour = new Date().getHours();
     const gameTextTextArea = document.getElementById('gameTextTextArea');
+    const gameImage = document.getElementById('gameImage')
     const button1 = document.querySelector('#gameButton1');
     const button2 = document.querySelector('#gameButton2');
     const button3 = document.querySelector('#gameButton3');
@@ -45,12 +46,14 @@
         "button functions": [drinkMushroomCoffee, goToCanyon, goToTown],
         "hazards": [],
         "prizes": [],
-        text: "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?"
+        text: "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?",
+        locationImage: 'limestoneCafe.jpg'
       }
     ];
 
     // Functions
     function update(location) {
+      gameImage.src = location.locationImage;
       button1.innerText = location["button text"][0];
       button2.innerText = location["button text"][1];
       button3.innerText = location["button text"][2];
