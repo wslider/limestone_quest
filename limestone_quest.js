@@ -47,7 +47,7 @@
         "hazards": [],
         "prizes": [],
         text: "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?",
-        locationImage: 'limestoneCafe.jpg'
+        locationImage: 'images/limestoneCafe.jpg'
       }
     ];
 
