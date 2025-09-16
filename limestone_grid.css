@@ -39,7 +39,7 @@ header {
 }
 
 .statContainer > .stat {
-    font-size: 1.5rem; 
+    font-size: 1rem; 
 }
 
 .gameButtons {
@@ -50,7 +50,7 @@ header {
 }
 
 .gameButtons > .gameButton {
-    font-size: 1.5rem; 
+    font-size: 1rem; 
 }
 
 #gameText {
@@ -65,7 +65,7 @@ textarea {
 color: rgb(162, 253, 162); 
 width: 100%; 
 height: 100%; 
-font-size: 1.5rem; 
+font-size: 1rem; 
 }
 
 

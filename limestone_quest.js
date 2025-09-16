@@ -124,6 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('mushroomCoffeeText').textContent = mushroomCoffee;
   }
 
+    function useMagicMaguffin () {
+
+    }
+
+
   // Placeholder functions
   function goToTown() {
     gameTextTextArea.value = "You head to Town!";
@@ -149,3 +154,10 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("Setting initial location...");
   updateLocation(locations[0]);
 });
+
+/* use concepts
+
+.map()  - 
+.some() - weapons 
+
+*/
