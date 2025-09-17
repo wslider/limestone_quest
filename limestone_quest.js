@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let greeting;
     if (hour >= 6 && hour < 12) {
-      greeting = "Good Morning. Why not head over to Limestone Cafe for some Mushroom Coffee?";
+      greeting = "Welcome to Limestone Quest. Go to Limestone Cafe and grab some Mushroom Coffee.";
     } else if (hour >= 12 && hour < 17) {
-      greeting = "Good Afternoon. Why not take the trail into Limestone Canyon?";
+      greeting = "Welcome to Limestone Quest. Why not take the trail into Limestone Canyon?";
     } else if (hour >= 17 && hour < 20) {
-      greeting = "Good Evening. Why not go to Limestone Cafe and watch the sunset?";
+      greeting = "Welcome to Limestone Quest";
     } else {
-      greeting = "Good Night. It's getting dark out there. Watch out for goblins.";
+      greeting = "It's getting dark out there. Watch out for goblins.";
     }
     gameTextTextArea.value = greeting;
     console.log("Textarea value set to:", gameTextTextArea.value);
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const locations = [
     {
       name: "Start",
-      "button text": ["Go to Cafe", "Go to Canyon", "Go to Town", "Look Around", "Use Time Machine"],
-      "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), goToTown, lookAround, useTimeMachine],
+      "button text": ["Go to Cafe", "Go to Canyon", "Go to Town", "Go to Fozberry Falls", "Look Around"],
+      "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), ()=> updateLocation(locations[3]), () => updateLocation(locations[4]), lookAround],
       "hazards": [],
       "prizes": [],
       text: "", // Will be set by customGreeting
@@ -67,13 +67,34 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: "Limestone Canyon",
       "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Enter Abandoned Mine", "Use Time Machine"],
-      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, goToFozberryFalls, lookAround, useTimeMachine],
+      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, useTimeMachine],
       "hazards": [],
       "prizes": [],
       text: "Welcome to Limestone Canyon. You see signs for trails and warnings about hazards, but the trail ahead looks fine.",
       locationImage: 'images/limestoneCanyon.jpg',
       lookAroundText: "You look around and see towering canyon walls, a narrow trail, and distant echoes of water."
+    },
+    {
+      name: "Town Square",
+      "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Look Around", "Go To Store"],
+      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, goToTown], // fix
+      "hazards": [],
+      "prizes": [],
+      text: "Welcome to Limestone. You find yourself in the town square.",
+      locationImage: 'images/limestoneCanyon.jpg',
+      lookAroundText: "You look around to see shops with overpriced goods, and a marketplace."
+    },
+    {
+      name: "Fozberry Falls",
+      "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Enter Abandoned Mine", "Use Time Machine"],
+      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, useTimeMachine],
+      "hazards": [],
+      "prizes": [],
+      text: "Welcome to Fozberry Falls",
+      locationImage: 'images/fozberryFalls.jpg',
+      lookAroundText: ""
     }
+
   ];
 
   // Functions
