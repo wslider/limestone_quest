@@ -45,21 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Locations 
   const locations = [
     {
-      name: "Start",
-      id: "0", 
-      "button text": ["Go to Cafe", "Go to Canyon", "Go to Canyon", "Go to Fozberry Falls", "Look Around"],
-      "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), ()=> updateLocation(locations[3]), lookAround],
+      id: 0,
+      name: "Trailhead",
+      "button text": ["Go to Cafe", "Go to Canyon", "Go to Fozberry Falls", "Go To Canyonview Tower", "Look Around"],
+      "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), ()=> updateLocation(locations[3]), ()=> updateLocation(locations[0]), lookAround],
       "hazards": [],
       "prizes": [],
-      text: "", // Will be set by customGreeting
-      locationImage: 'images/limestoneCanyonNightCafeLitPath.jpg',
+      text: "Welcome to the Trailhead. The Start of Your Adventures",
+      locationImage: 'images/limestoneCanyonNightCafeLitPath.jpg', 
       lookAroundText: "You look around and see the canyon rim above, a lit path to the cafe, and a quiet night settling in."
     },
     {
+      id: 1,
       name: "Limestone Cafe",
-      id: "1",
-      "button text": ["Drink Coffee", "Go to Canyon", "Look Around", "Use Time Machine"],
-      "button functions": [drinkMushroomCoffee, () => updateLocation(locations[2]), lookAround, useTimeMachine],
+      "button text": ["Go Back", "Drink Coffee", "Go to Canyon", "Look Around", "Talk to Bob"],
+      "button functions": [() => updateLocation(locations[0]), drinkMushroomCoffee, () => updateLocation(locations[2]), lookAround, lookAround],
       "hazards": [],
       "prizes": [],
       text: "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?",
@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
       lookAroundText: "You look around and see a mostly empty cafe, steaming cups of mushroom coffee, and a suspicious-looking book on the table near the fireplace."
     },
     {
+      id: 2,
       name: "Limestone Canyon",
-      id: "2",
       "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Enter Abandoned Mine", "Use Time Machine"],
-      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, useTimeMachine],
+      "button functions": [() => updateLocation(locations[0]), () => updateLocation(locations[4]), () => updateLocation(locations[3]), lookAround, useTimeMachine],
       "hazards": [],
       "prizes": [],
       text: "Welcome to Limestone Canyon. You see signs for trails and warnings about hazards, but the trail ahead looks fine.",
@@ -78,17 +78,27 @@ document.addEventListener('DOMContentLoaded', () => {
       lookAroundText: "You look around and see towering canyon walls, a narrow trail, and distant echoes of water."
     },
     {
+      id:3,
       name: "Fozberry Falls",
-      id: "3",
-      "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Enter Abandoned Mine", "Use Time Machine"],
-      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, useTimeMachine],
+      "button text": ["Go Back", "Go To Limestone Canyon", "Whispering Stream", "Look Around", "Use Time Machine"],
+      "button functions": [() => updateLocation(locations[0]), ()=> updateLocation(locations[2]), lookAround, lookAround, useTimeMachine],
       "hazards": [],
       "prizes": [],
       text: "Welcome to Fozberry Falls",
       locationImage: 'images/fozberryFalls.jpg',
       lookAroundText: "Fozberry Falls roar and spay mist high into the air. Watch out for slippery moss and poisonous salimanders!"
+    },
+    { id: 4,
+      name: "Deep Canyon",
+      "button text": ["Go Back", "Enter Crystal Cave", "Enter Mushroom Forest", "Look Around", "Use Time Machine"],
+      "button functions": [() => updateLocation(locations[2]),  lookAround, lookAround, lookAround, useTimeMachine],
+      "hazards": [],
+      "prizes": [],
+      text: "Welcome to the Deep Canyon and its dark depths. Few make it this far and even fewer return to tell the tale.",
+      locationImage: 'images/limestoneDeepCanyonTrail.jpg',
+      lookAroundText:""
     }
-
+ 
   ];
 
   // Functions
