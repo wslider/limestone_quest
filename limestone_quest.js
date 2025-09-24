@@ -46,8 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const locations = [
     {
       name: "Start",
-      "button text": ["Go to Cafe", "Go to Canyon", "Go to Town", "Go to Fozberry Falls", "Look Around"],
-      "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), ()=> updateLocation(locations[3]), () => updateLocation(locations[4]), lookAround],
+      id: "0", 
+      "button text": ["Go to Cafe", "Go to Canyon", "Go to Canyon", "Go to Fozberry Falls", "Look Around"],
+      "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), ()=> updateLocation(locations[3]), lookAround],
       "hazards": [],
       "prizes": [],
       text: "", // Will be set by customGreeting
@@ -56,8 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: "Limestone Cafe",
-      "button text": ["Drink Coffee", "Go to Canyon", "Go to Town", "Look Around", "Use Time Machine"],
-      "button functions": [drinkMushroomCoffee, () => updateLocation(locations[2]), goToTown, lookAround, useTimeMachine],
+      id: "1",
+      "button text": ["Drink Coffee", "Go to Canyon", "Look Around", "Use Time Machine"],
+      "button functions": [drinkMushroomCoffee, () => updateLocation(locations[2]), lookAround, useTimeMachine],
       "hazards": [],
       "prizes": [],
       text: "Welcome to Limestone Cafe. Would you like some Mushroom Coffee?",
@@ -66,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: "Limestone Canyon",
+      id: "2",
       "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Enter Abandoned Mine", "Use Time Machine"],
       "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, useTimeMachine],
       "hazards": [],
@@ -75,24 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
       lookAroundText: "You look around and see towering canyon walls, a narrow trail, and distant echoes of water."
     },
     {
-      name: "Town Square",
-      "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Look Around", "Go To Store"],
-      "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, goToTown], // fix
-      "hazards": [],
-      "prizes": [],
-      text: "Welcome to Limestone. You find yourself in the town square.",
-      locationImage: 'images/limestoneCanyon.jpg',
-      lookAroundText: "You look around to see shops with overpriced goods, and a marketplace."
-    },
-    {
       name: "Fozberry Falls",
+      id: "3",
       "button text": ["Go Back", "Deep Canyon Trail", "Fozberry Falls Trail", "Enter Abandoned Mine", "Use Time Machine"],
       "button functions": [() => updateLocation(locations[0]), goToDeepCanyon, () => updateLocation(locations[4]), lookAround, useTimeMachine],
       "hazards": [],
       "prizes": [],
       text: "Welcome to Fozberry Falls",
       locationImage: 'images/fozberryFalls.jpg',
-      lookAroundText: ""
+      lookAroundText: "Fozberry Falls roar and spay mist high into the air. Watch out for slippery moss and poisonous salimanders!"
     }
 
   ];

@@ -34,7 +34,7 @@ const characters = {
         money: 0,
         location: "cafe",
         dialogue: "",
-        bio: ""
+        bio: "Ever since he found the magic-maguffin in an abandoned mine, Bob realised he could manifest anything he needed in the moment. "
     },
     mushroomKing: {
         id: "mushroomKing",
