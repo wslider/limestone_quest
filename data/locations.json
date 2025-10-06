@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "name": "Trailhead",
+    "description": "The starting point of Limestone Canyon adventures.",
+    "connectedTo": [1, 2, 3],
+    "type": "Outdoor"
+  },
+  {
+    "id": 1,
+    "name": "Limestone Canyon",
+    "description": "A lush, mysterious canyon with deep trails.",
+    "connectedTo": [0, 2, 3, 4],
+    "type": "Outdoor"
+  },
+  {
+    "id": 2,
+    "name": "Limestone Café",
+    "description": "A cozy cafe on the canyon rim, buzzing with stories.",
+    "connectedTo": [0],
+    "type": "Indoor"
+  },
+  {
+    "id": 3,
+    "name": "Whispering Stream Trail",
+    "description": "A serene trail with a mystical stream.",
+    "connectedTo": [0, 1],
+    "type": "Outdoor"
+  },
+  {
+    "id": 4,
+    "name": "Abandoned Mine",
+    "description": "A dark mine shaft with glowing stones.",
+    "connectedTo": [1],
+    "type": "Indoor"
+  }
+]

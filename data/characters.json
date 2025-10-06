@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "Jenny",
+    "type": "Beagle-Jack Russell Mix",
+    "stats": {
+      "health": 100,
+      "agility": 80,
+      "strength": 60
+    },
+    "skills": ["Track", "Bark"],
+    "location": "Limestone Canyon",
+    "description": "A bold and lively dog with a metronome tail."
+  },
+  {
+    "id": 1,
+    "name": "Little",
+    "type": "Lionhead Dwarf Rabbit",
+    "stats": {
+      "health": 80,
+      "agility": 90,
+      "strength": 40
+    },
+    "skills": ["Burrow", "Observe"],
+    "location": "Limestone Canyon",
+    "description": "A brave rabbit with a thundercloud mane."
+  },
+  {
+    "id": 2,
+    "name": "Jim",
+    "type": "Human",
+    "title": "The Mushroom King",
+    "stats": {
+      "health": 90,
+      "agility": 50,
+      "strength": 70
+    },
+    "skills": ["Forage", "Craft"],
+    "location": "Mushroom Cave",
+    "description": "A rugged folk hero supplying mystical mushrooms."
+  }
+]
