@@ -1,3 +1,5 @@
+import { timeGreeting } from './functions.js'; 
+
 // Global variables
 let health = 100;
 let energy = 0;
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "button functions": [() => updateLocation(locations[1]), () => updateLocation(locations[2]), ()=> updateLocation(locations[3]), ()=> updateLocation(locations[0]), lookAround],
       "hazards": [],
       "prizes": [],
-      text: "Welcome to the Trailhead. The Start of Your Adventures",
+      text: timeGreeting(),
       locationImage: 'images/limestoneCanyonNightCafeLitPath.jpg', 
       lookAroundText: "You look around and see the canyon rim above, a lit path to the cafe, and a quiet night settling in."
     },
