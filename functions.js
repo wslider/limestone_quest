@@ -3,7 +3,7 @@
 
 // custom greeting with time 
 
-function timeGreeting() {
+function updateGreeting() {
   const now = new Date();
   const year = now.getFullYear();
   const monthNames = [
@@ -34,26 +34,27 @@ function timeGreeting() {
     }
   })();
 
-  const randomName = (() => {
-    const randomNum = Math.floor(Math.random() * 10) + 1;
-    if (randomNum > 8) {
-      return { english: "Adventurer", malayalam: "സാഹസികൻ" };
-    } else {
-      return { english: "Traveler", malayalam: "സഞ്ചാരി" };
-    }
-  })();
 
   const fullGreetingStr = (minsPadded) => {
     const currentMins = parseInt(minsPadded, 10);
     if (currentMins % 2 === 0) {
-      return `${greeting.english}, ${randomName.english}! It is ${year} ${month} ${day} at ${hour}:${minsPadded} ${amPm}.`;
+      return `${greeting.english}! It is ${year} ${month} ${day} at ${hour}:${minsPadded} ${amPm}.`;
     } else {
-      return `${greeting.malayalam}, ${randomName.malayalam}! It is ${year} ${month} ${day} at ${hour}:${minsPadded} ${amPm}.`;
+      return `${greeting.malayalam}! It is ${year} ${month} ${day} at ${hour}:${minsPadded} ${amPm}.`;
     }
   };
 
-  return fullGreetingStr(mins);
+  const fullGreetingText = fullGreetingStr(mins);
+
+  // Update the DOM element
+  const greetingTextArea = document.getElementById('greetingTextArea');
+  if (greetingTextArea) {
+    greetingTextArea.textContent = fullGreetingText;
+  }
 }
 
-// Export for use in other modules (ES6 syntax)
-export { timeGreeting };
+// Initial call
+updateGreeting();
+
+// Update every second
+setInterval(updateGreeting, 1000);

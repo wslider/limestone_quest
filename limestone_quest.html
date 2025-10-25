@@ -9,13 +9,14 @@
 <body>
     <header><h1>Welcome to Limestone Quest</h1></header>
     <main class="container" id="gameContainer">
-        <img src="images/limestoneCanyonNightCafeLitPath.jpg" class="image" id="gameImage" alt="Image of Limestone Canyon on a rainy night with Limestone Cafe emitting a warm glow from the Canyon's rim.">
+        <img src="images/limestoneCanyonNightCafeLitPath.jpg" class="image" id="gameImage" href="./hiddenWorld.html" alt="Image of Limestone Canyon on a rainy night with Limestone Cafe emitting a warm glow from the Canyon's rim.">
         <div class="statContainer" id="gameStats">
             <div class="stat">Level = <strong><span id="levelText">1</span></strong></div>
             <div class="stat">Health = <strong><span id="healthText">100</span></strong></div>
             <div class="stat">XP = <strong><span id="xpText">10</span></strong></div>
             <div class="stat">Money = <strong><span id="moneyText">0</span></strong></div>
             <div class="stat">Mushroom Coffee = <strong><span id="mushroomCoffeeText">10</span></strong></div>
+            <div class="stat"><a href="hiddenWorld.html">Side Quest</a></div>
         </div>
         <div class="gameButtons" id="gameButtonsTrailhead">
             <button class="gameButton" id="gameButton1">Go to Cafe</button>
@@ -26,7 +27,6 @@
         </div>
         <div class="text" id="gameText"><textarea id="gameTextTextArea" placeholder="game text will appear here"></textarea></div>
     </main>
-
     <script src="limestone_quest.js"></script> 
     <script src="characters.js"></script> 
 </body>
